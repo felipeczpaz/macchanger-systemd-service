@@ -1,0 +1,11 @@
+[Unit]
+Description=Randomize MAC Address
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/randomize-mac.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
